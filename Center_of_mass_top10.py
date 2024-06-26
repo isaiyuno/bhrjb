@@ -87,4 +87,4 @@ print("Matches (Halo index in s1, Halo index in s2, Distance):")
 for match in matches:
    print(match)
 
-
+#I'm still going to add the black hole mass part to this code
