@@ -87,4 +87,24 @@ print("Matches (Halo index in s1, Halo index in s2, Distance):")
 for match in matches:
    print(match)
 
-#I'm still going to add the black hole mass part to this code
+
+for i in range(5): 
+    halo = h1[i]
+    if 'bh_mass' in halo.properties:
+        bh_mass = halo.properties['bh_mass']
+        print(f"Halo {halo['iord']} in s1: Black hole mass = {bh_mass}")
+    else:
+        print(f"Halo {halo['iord']} in s1: No black hole mass data available")
+
+
+s2 = pynbody.load('/mnt/data0/jillian/h148/6144/h148.cosmo50PLK.6144g3HbwK1BH.003264/h148.cosmo50PLK.6144g3HbwK1BH.003264')
+s2.physical_units()
+h2 = s2.halos()
+
+for j in range(10):  
+    halo = h2[i]
+    if 'bh_mass' in halo.properties:
+        bh_mass = halo.properties['bh_mass']
+        print(f"Halo {halo['iord']} in s1: Black hole mass = {bh_mass}")
+    else:
+        print(f"Halo {halo['iord']} in s1: No black hole mass data available")
